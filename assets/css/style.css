@@ -52,3 +52,26 @@ figure{
     z-index: 1;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top:5em;
+    z-index: 2;
+
+}
+main h2{
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5em;
+    flex: 1;
+    border: 2px solid black;
+}
+main section{
+    flex: 1;
+    background-color: aliceblue;
+    border: 2px solid black;
+}
