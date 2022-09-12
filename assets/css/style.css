@@ -20,7 +20,6 @@ a{
     --transition: all 0.5s;}
 body{
     width: 100%;
-    background-color: black;
 }
 /*Header*/
 /*Fixed position on the top of page
@@ -102,7 +101,7 @@ Flex box element of main content
 */
 main h2{
     padding-top: 18vw;
-    padding-bottom: 23vw;
+    padding-bottom: 27vw;
     text-align: center;
     font-family: var(--title-font);
     font-size: 5vw;
@@ -127,7 +126,7 @@ main>section{
 }
 /*Main content section-title
 Flex box element for main content section
-Disable user-select*/
+*/
 section .section-title{
     flex: 1;
     text-align: right;
@@ -135,7 +134,6 @@ section .section-title{
     border-right: 7px solid black;
     font-size: 2em;
     padding: 1em;
-    
 }
 /*Main content section-content
 Flex box element for main content section*/
@@ -206,7 +204,11 @@ change its child title background and text color*/
     color:black;
     transform: scale(1.2);
 }
-
+/*Media Query for smaller devices
+Adjust header font sizes
+remove figure and h2 for a cleaner layout
+change main section to flex column display
+Remove filter for work img*/
 @media screen and (max-width:768px) {
     header h1{
         font-size: 5vw;
@@ -214,7 +216,6 @@ change its child title background and text color*/
     nav>a{
         font-size: 3vw;
     }
-    header
     figure{
         display: none;
     }
