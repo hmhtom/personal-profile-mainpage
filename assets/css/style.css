@@ -2,6 +2,10 @@
 Smooth scroll added for better navigation scroll effect*/
 *{
     scroll-behavior: smooth;
+    --title-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --header-bar-bgcolor: linear-gradient(#ADB1B1 , black);
+    --header-bar-txtcolor: white;
+    --main-content-bgcolor: #EAEAEA;
 }
 :root{}
 body{
@@ -15,16 +19,15 @@ header{
     width: 100%;
     position: fixed;
     z-index: 3;
-    color: white;
     display:flex;
     justify-content: space-between;
-    background-image: linear-gradient(#ADB1B1 , black);
+    background-image: var(--header-bar-bgcolor);
 }
 /*Header Main-Icon
 Flex box #1 inside Header*/
 header h1{
     flex: 1;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--title-font);
     font-size: 2.5em;
     padding-left: 1em;
     padding-top: 0.1em;
@@ -32,7 +35,7 @@ header h1{
 }
 /*Clearing Hyperlink text-decro for header-icon*/
 header h1 a{
-    color: white;
+    color: var(--header-bar-txtcolor);
     text-decoration: none;
 }
 /*Header Navigation bar
@@ -48,11 +51,11 @@ Hyperlink text-decro cleared*/
 nav a{
     flex: 1;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--title-font);
     font-size: 1.5em;
     text-decoration: none;
     padding: 0.5em;
-    color: white;
+    color: var(--header-bar-txtcolor);
 }
 /*Main background image below header
 Fixed position
@@ -87,7 +90,7 @@ main h2{
     padding-top: 3em;
     padding-bottom: 5em;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--title-font);
     font-size: 5em;
     flex: 1;
     color: white;
@@ -107,7 +110,7 @@ main section{
     flex: 1;
     display: flex;
     justify-content: space-around;
-    background-color: white;
+    background-color: var(--main-content-bgcolor);
 }
 /*Main content section-title
 Flex box element for main content section
@@ -115,6 +118,7 @@ Disable user-select*/
 section .section-title{
     flex: 1;
     text-align: right;
+    font-family: var(--title-font);
     border-right: 7px solid black;
     font-size: 2em;
     padding: 1em;
