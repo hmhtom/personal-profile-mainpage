@@ -38,6 +38,10 @@ header h1 a{
     color: var(--header-bar-txtcolor);
     text-decoration: none;
 }
+/*Header-icon click effect*/
+header h1 a:active{
+    color: black;
+}
 /*Header Navigation bar
 Flex box #2 inside Header
 Flex layout with nav button as elements*/
