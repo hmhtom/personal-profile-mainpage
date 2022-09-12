@@ -1,40 +1,50 @@
+/*Universal Selector
+Smooth scroll added for better navigation scroll effect*/
 *{
     scroll-behavior: smooth;
 }
 :root{}
 body{
-    width: 100%;
-    
+    width: 100%;  
 }
-
+/*Header*/
+/*Fixed position on the top of page
+Highest z-index to make it always in front of other elements
+Flex layout with 2 elements h1/nav inside*/
 header{
     width: 100%;
     position: fixed;
     z-index: 3;
     color: white;
-}
-#headerbar{
     display:flex;
     justify-content: space-between;
     background-image: linear-gradient(#ADB1B1 , black);
 }
-#headerbar h1{
+/*Header Main-Icon
+Flex box #1 inside Header*/
+header h1{
     flex: 1;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.5em;
     padding-left: 1em;
     padding-top: 0.1em;
-
+    
 }
-#main-icon{
+/*Clearing Hyperlink text-decro for header-icon*/
+header h1 a{
     color: white;
     text-decoration: none;
 }
-#headerbar nav{
+/*Header Navigation bar
+Flex box #2 inside Header
+Flex layout with nav button as elements*/
+header nav{
     flex: 1;
     display: flex;
     justify-content: space-around;
 }
+/*Flex elements for header nav
+Hyperlink text-decro cleared*/
 nav a{
     flex: 1;
     text-align: center;
@@ -44,7 +54,9 @@ nav a{
     padding: 0.5em;
     color: white;
 }
-
+/*Main background image below header
+Fixed position
+Lowest z-index so main content can scroll over it*/
 figure{
     position: fixed;
     top:50px;
@@ -56,6 +68,10 @@ figure{
     z-index: 1;
 }
 
+/*Main content
+Flex layout with h2(header) and sections as elements
+z-index set above figure and below header
+*/
 main{
     display: flex;
     flex-direction: column;
@@ -63,6 +79,10 @@ main{
     position: relative;
     z-index: 2;
 }
+/*Main content header
+Flex box element of main content
+Disable user-select
+*/
 main h2{
     padding-top: 3em;
     padding-bottom: 5em;
@@ -73,17 +93,25 @@ main h2{
     color: white;
     user-select: none;
 }
+/*Main content section anker offset
+Purpose to correctly position the sections when click on its correspondent navigation*/
 main .anker-offset{
     position: relative;
     top: -2em;
 }
+/*Main content section
+Flex box element of main content
+Flex layout contains section-title and section-content*/
 main section{
     padding-top: 1em;
     flex: 1;
     display: flex;
     justify-content: space-around;
-    background-color: aliceblue;
+    background-color: white;
 }
+/*Main content section-title
+Flex box element for main content section
+Disable user-select*/
 section .section-title{
     flex: 1;
     text-align: right;
@@ -92,10 +120,14 @@ section .section-title{
     padding: 1em;
     user-select: none;
 }
+/*Main content section-content
+Flex box element for main content section*/
 section .section-content{
     flex: 4;
     padding: 1em;
 }
+/*Section-content for Work section specific
+Grid layout*/
 #work-content{
     display: grid;
 }
