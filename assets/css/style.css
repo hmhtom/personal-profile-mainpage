@@ -1,5 +1,5 @@
 *{
-
+    scroll-behavior: smooth;
 }
 :root{}
 body{
@@ -24,6 +24,11 @@ header{
     font-size: 2.5em;
     padding-left: 1em;
     padding-top: 0.1em;
+
+}
+#main-icon{
+    color: white;
+    text-decoration: none;
 }
 #headerbar nav{
     flex: 1;
@@ -66,6 +71,7 @@ main h2{
     font-size: 5em;
     flex: 1;
     color: white;
+    user-select: none;
 }
 main .anker-offset{
     position: relative;
@@ -84,8 +90,12 @@ section .section-title{
     border-right: 7px solid black;
     font-size: 2em;
     padding: 1em;
+    user-select: none;
 }
 section .section-content{
     flex: 4;
     padding: 1em;
+}
+#work-content{
+    display: grid;
 }
