@@ -1,15 +1,26 @@
 /*Universal Selector
+Disable global user-select
 Smooth scroll added for better navigation scroll effect*/
 *{
     scroll-behavior: smooth;
-    --title-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --header-bar-bgcolor: linear-gradient(#ADB1B1 , black);
-    --header-bar-txtcolor: white;
-    --main-content-bgcolor: #EAEAEA;
+    user-select: none;
 }
-:root{}
+/*Remove all hyperlink style*/
+a{
+    text-decoration: none;
+    color: var(--white-txtcolor);
+}
+/*Global variables*/
+:root{
+    --title-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --gray-black-bgcolor: linear-gradient(#ADB1B1 , black);
+    --gray-white-bgcolor:linear-gradient(#ADB1B1 , white);
+    --white-txtcolor: white;
+    --main-content-bgcolor: white;
+    --transition: all 0.5s;}
 body{
-    width: 100%;  
+    width: 100%;
+    background-color: black;
 }
 /*Header*/
 /*Fixed position on the top of page
@@ -21,22 +32,16 @@ header{
     z-index: 3;
     display:flex;
     justify-content: space-between;
-    background-image: var(--header-bar-bgcolor);
+    background-image: var(--gray-black-bgcolor);
 }
 /*Header Main-Icon
 Flex box #1 inside Header*/
 header h1{
     flex: 1;
     font-family: var(--title-font);
-    font-size: 2.5em;
-    padding-left: 1em;
-    padding-top: 0.1em;
+    font-size: 2.5vw;
+    padding: 0.5vw 0vw 0.5vw 2vw;
     
-}
-/*Clearing Hyperlink text-decro for header-icon*/
-header h1 a{
-    color: var(--header-bar-txtcolor);
-    text-decoration: none;
 }
 /*Header-icon click effect*/
 header h1 a:active{
@@ -52,21 +57,19 @@ header nav{
 }
 /*Flex elements for header nav
 Hyperlink text-decro cleared*/
-nav a{
+nav>a{
     flex: 1;
     text-align: center;
     font-family: var(--title-font);
-    font-size: 1.5em;
-    text-decoration: none;
-    padding: 0.5em;
-    color: var(--header-bar-txtcolor);
+    font-size: 1.5vw;
+    padding: 1vw 0.5vw 0vw 0.5vw;
     border-radius: 10px;
-    transition: all 0.5s;
+    transition: var(--transition);
 }
 /*Navigation button :hover effect*/
 nav a:hover{
     background-color: #ADB1B1;
-    background-image: linear-gradient(#ADB1B1 , white);
+    background-image: var(--gray-white-bgcolor);
     color:black;
 }
 /*Main background image below header
@@ -74,9 +77,9 @@ Fixed position
 Lowest z-index so main content can scroll over it*/
 figure{
     position: fixed;
-    top:50px;
+    top:3vw;
     width: 100%;
-    height: 1000px;
+    height: 95%;
     background-image: url(../images/filler.jpg);
     background-repeat:no-repeat;
     background-size:cover;
@@ -96,30 +99,28 @@ main{
 }
 /*Main content header
 Flex box element of main content
-Disable user-select
 */
 main h2{
-    padding-top: 3em;
-    padding-bottom: 5em;
+    padding-top: 18vw;
+    padding-bottom: 23vw;
     text-align: center;
     font-family: var(--title-font);
-    font-size: 5em;
+    font-size: 5vw;
     flex: 1;
     color: white;
-    user-select: none;
 }
 /*Main content section anker offset
 Purpose to correctly position the sections when click on its correspondent navigation*/
 main .anker-offset{
     position: relative;
-    top: -2em;
+    top: -3vw;
 }
 /*Main content section
 Flex box element of main content
 Flex layout contains section-title and section-content*/
-main section{
+main>section{
     padding-top: 1em;
-    flex: 1;
+    padding-right: 8em;
     display: flex;
     justify-content: space-around;
     background-color: var(--main-content-bgcolor);
@@ -134,7 +135,7 @@ section .section-title{
     border-right: 7px solid black;
     font-size: 2em;
     padding: 1em;
-    user-select: none;
+    
 }
 /*Main content section-content
 Flex box element for main content section*/
@@ -143,7 +144,97 @@ section .section-content{
     padding: 1em;
 }
 /*Section-content for Work section specific
-Grid layout*/
+Grid layout 3x3*/
 #work-content{
     display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    gap: 1em;
+}
+/*Enlarged work grid setting*/
+#first-enlarge{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+#second-enlarge{
+    grid-column: 2/4;
+    grid-row: 3/5;
+}
+/*Each work as grid elements inside of work content*/
+#work-content>a{
+    position: relative;
+    border: 1em solid white;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+/*Hover effect on grid element
+adding box-shadow and thinner border*/
+#work-content>a:hover{
+    box-shadow: 0px 0px 10px black;
+}
+/*img inside each work
+filter set*/
+#work-content>a>img{
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: blur(4px) brightness(50%) grayscale(1);
+    transition: var(--transition);
+}
+/*Hover effect on grid element
+change its child img's filter to default*/
+#work-content>a:hover>img{
+    filter: none;
+    transform: scale(1.02);
+}
+/*Title inside each work*/
+#work-content>a>h3{
+    position: absolute;
+    display: inline;
+    padding: 1vw;
+    top: 1vw;
+    left: 1vw;
+    border-radius: 10px;
+    background-image: var(--gray-black-bgcolor);
+    color: var(--header-bar-txtcolor);
+    transition: var(--transition);
+}
+/*Hover effect on grid element
+change its child title background and text color*/
+#work-content>a:hover>h3{
+    background-image: var(--gray-white-bgcolor);
+    color:black;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:768px) {
+    header h1{
+        font-size: 5vw;
+    }
+    nav>a{
+        font-size: 3vw;
+    }
+    header
+    figure{
+        display: none;
+    }
+    main>h2{
+        display: none;
+    }
+    main>section{
+        flex-direction: column;
+        padding-right: 0;
+    }
+    section .section-title{
+        text-align: center;
+        border-right: none;
+        border-bottom: 7px solid black;
+    }
+    #work-content{
+        display: flex;
+        flex-direction: column;
+    }
+    #work-content>a>img{
+        filter:none;
+    }
 }
