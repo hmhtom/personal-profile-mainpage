@@ -35,7 +35,7 @@ header{
 }
 /*Header Main-Icon
 Flex box #1 inside Header*/
-header h1{
+header>h1{
     flex: 1;
     font-family: var(--title-font);
     font-size: 2.5vw;
@@ -43,13 +43,13 @@ header h1{
     
 }
 /*Header-icon click effect*/
-header h1 a:active{
+header>h1>a:active{
     color: black;
 }
 /*Header Navigation bar
 Flex box #2 inside Header
 Flex layout with nav button as elements*/
-header nav{
+header>nav{
     flex: 1;
     display: flex;
     justify-content: space-around;
@@ -66,7 +66,7 @@ nav>a{
     transition: var(--transition);
 }
 /*Navigation button :hover effect*/
-nav a:hover{
+nav>a:hover{
     background-color: #ADB1B1;
     background-image: var(--gray-white-bgcolor);
     color:black;
@@ -99,7 +99,7 @@ main{
 /*Main content header
 Flex box element of main content
 */
-main h2{
+main>h2{
     padding-top: 18vw;
     padding-bottom: 27vw;
     text-align: center;
@@ -204,6 +204,38 @@ change its child title background and text color*/
     color:black;
     transform: scale(1.2);
 }
+
+/*Contact me section content
+Flex layout*/
+#contact-me-content{
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+#contact-me-content>a{
+    flex: 0 0 80px;
+}
+#contact-me-content>a>img{
+    width: 90%;
+    filter:grayscale(1);
+    transition: var(--transition);
+}
+#contact-me-content>a:hover>img{
+    filter:none;
+}
+
+/*Footer*/
+footer{
+    position: relative;
+    background-color: black;
+    z-index: 2;
+    text-align: center;
+}
+footer>h2{
+    color:var(--white-txtcolor);
+    font-size: 1em; 
+}
+
 /*Media Query for smaller devices
 Adjust header font sizes
 remove figure and h2 for a cleaner layout
