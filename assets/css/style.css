@@ -56,6 +56,14 @@ nav a{
     text-decoration: none;
     padding: 0.5em;
     color: var(--header-bar-txtcolor);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+/*Navigation button :hover effect*/
+nav a:hover{
+    background-color: #ADB1B1;
+    background-image: linear-gradient(#ADB1B1 , white);
+    color:black;
 }
 /*Main background image below header
 Fixed position
