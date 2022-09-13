@@ -11,12 +11,19 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-[Back to Top](#personal-profile-webpage)
-
 ## Description
 
-- This is a template for a personal profile webpage designed using HTML and CSS.
-- The reason to use only CSS to style is because it makes this template easy to customize into your own personal profile webpage.
+> This is a template for a personal profile webpage designed using HTML and CSS.
+>
+> The reason to use only CSS to style is because it makes this template easy to customize into your own personal profile webpage.
+
+> This template personal profile page contains following sections:
+>
+> - **About me**: a brief introduction about yourself
+> - **Work**: Here is where you showcase your work, employers can click on the links going to each deployed application
+> - **Contact me**: Here is where you put your contact including email, github, linkedin, facebook, youtube and instagram
+
+> Also when view from smaller viewport, website will responsively auto-adjust its content
 
 [Back to Top](#personal-profile-webpage)
 
