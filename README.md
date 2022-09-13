@@ -51,14 +51,14 @@
 
 ### Active Text Color
 
-> Text color for header title, navigation buttons and project title when they are active or hovered:
+> Text color for header title when active, navigation buttons and project title when hovered:
 >
 > <img src="./assets/images/readme-headertitle-click.png" width="30%">
 > <img src="./assets/images/readme-nav-button-hover.png" width="30%">
 > <img src="./assets/images/readme-worktitle-hover.png" width="20%">
 >
 > Can be changed from
-> `:root {--content-text-color: <color>;}`
+> `:root {--text-hover-color: <color>;}`
 
 [Back to Top](#personal-profile-webpage)
 

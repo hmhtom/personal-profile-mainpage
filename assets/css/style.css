@@ -14,6 +14,7 @@ a{
     --global-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --global-text-color: white;
     --content-text-color: black;
+    --text-hover-color:black;
     
     --header-bgcolor: linear-gradient(#ADB1B1 , black);
     --work-title-bgcolor:linear-gradient(#ADB1B1 , black);
@@ -51,7 +52,7 @@ header>h1{
 }
 /*Header-icon click effect*/
 header>h1>a:active{
-    color: black;
+    color: var(--text-hover-color);
 }
 /*Header Navigation bar
 Flex box #2 inside Header
@@ -75,7 +76,7 @@ nav>a{
 nav>a:hover{
     background-color: #ADB1B1;
     background-image: var(--navbutton-bgcolor-hover);
-    color:black;
+    color:var(--text-hover-color);
 }
 /*Main background image below header
 Fixed position
@@ -206,7 +207,7 @@ change its child img's filter to default*/
 change its child title background and text color*/
 #work-content>a:hover>h3{
     background-image: var(--work-title-bgcolor-hover);
-    color:black;
+    color:var(--text-hover-color);
     transform: scale(1.2);
 }
 
