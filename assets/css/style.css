@@ -148,7 +148,7 @@ section .section-content{
     padding: 1em;
 }
 /*Section-content for Work section specific
-Grid layout 3x3*/
+Grid layout 3x4*/
 #work-content{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
