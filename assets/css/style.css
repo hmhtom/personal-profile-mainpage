@@ -1,23 +1,32 @@
-/*Universal Selector
-Disable global user-select
-Smooth scroll added for better navigation scroll effect*/
+/*Universal Selector*/
 *{
     scroll-behavior: smooth;
     user-select: none;
+    font-family: var(--global-font);
 }
 /*Remove all hyperlink style*/
 a{
     text-decoration: none;
-    color: var(--white-txtcolor);
+    color: var(--global-text-color);
 }
 /*Global variables*/
 :root{
-    --title-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --gray-black-bgcolor: linear-gradient(#ADB1B1 , black);
-    --gray-white-bgcolor:linear-gradient(#ADB1B1 , white);
-    --white-txtcolor: white;
+    --global-font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --global-text-color: white;
+    --content-text-color: black;
+    
+    --header-bgcolor: linear-gradient(#ADB1B1 , black);
+    --work-title-bgcolor:linear-gradient(#ADB1B1 , black);
     --main-content-bgcolor: white;
-    --transition: all 0.5s;}
+
+    --navbutton-bgcolor-hover:linear-gradient(#ADB1B1 , white);
+    --work-title-bgcolor-hover:linear-gradient(#ADB1B1 , white);
+    
+    --transition: all 0.5s;
+    
+}
+
+    
 body{
     width: 100%;
 }
@@ -31,13 +40,12 @@ header{
     z-index: 3;
     display:flex;
     justify-content: space-between;
-    background-image: var(--gray-black-bgcolor);
+    background-image: var(--header-bgcolor);
 }
 /*Header Main-Icon
 Flex box #1 inside Header*/
 header>h1{
     flex: 1;
-    font-family: var(--title-font);
     font-size: 2.5vw;
     padding: 0.5vw 0vw 0.5vw 2vw;
     
@@ -59,7 +67,6 @@ Hyperlink text-decro cleared*/
 nav>a{
     flex: 1;
     text-align: center;
-    font-family: var(--title-font);
     font-size: 1.5vw;
     padding: 1vw 0.5vw 0vw 0.5vw;
     border-radius: 10px;
@@ -68,7 +75,7 @@ nav>a{
 /*Navigation button :hover effect*/
 nav>a:hover{
     background-color: #ADB1B1;
-    background-image: var(--gray-white-bgcolor);
+    background-image: var(--navbutton-bgcolor-hover);
     color:black;
 }
 /*Main background image below header
@@ -103,10 +110,9 @@ main>h2{
     padding-top: 18vw;
     padding-bottom: 27vw;
     text-align: center;
-    font-family: var(--title-font);
     font-size: 5vw;
     flex: 1;
-    color: white;
+    color: var(--global-text-color);
 }
 /*Main content section anker offset
 Purpose to correctly position the sections when click on its correspondent navigation*/
@@ -130,10 +136,10 @@ Flex box element for main content section
 section .section-title{
     flex: 1;
     text-align: right;
-    font-family: var(--title-font);
     border-right: 7px solid black;
     font-size: 2em;
     padding: 1em;
+    color: var(--content-text-color);
 }
 /*Main content section-content
 Flex box element for main content section*/
@@ -193,14 +199,14 @@ change its child img's filter to default*/
     top: 1vw;
     left: 1vw;
     border-radius: 10px;
-    background-image: var(--gray-black-bgcolor);
-    color: var(--header-bar-txtcolor);
+    background-image: var(--work-title-bgcolor);
+    color: var(--global-text-color);
     transition: var(--transition);
 }
 /*Hover effect on grid element
 change its child title background and text color*/
 #work-content>a:hover>h3{
-    background-image: var(--gray-white-bgcolor);
+    background-image: var(--work-title-bgcolor-hover);
     color:black;
     transform: scale(1.2);
 }
@@ -227,12 +233,12 @@ Flex layout*/
 /*Footer*/
 footer{
     position: relative;
-    background-color: black;
+    background-image: var(--header-bgcolor);
     z-index: 2;
     text-align: center;
 }
 footer>h2{
-    color:var(--white-txtcolor);
+    color:var(--global-text-color);
     font-size: 1em; 
 }
 
