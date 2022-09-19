@@ -152,7 +152,7 @@ Grid layout 3x4*/
 #work-content{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: 1em;
 }
 /*Enlarged work grid setting*/
@@ -160,10 +160,7 @@ Grid layout 3x4*/
     grid-column: 1/3;
     grid-row: 1/3;
 }
-#second-enlarge{
-    grid-column: 2/4;
-    grid-row: 3/5;
-}
+
 /*Each work as grid elements inside of work content*/
 #work-content>a{
     position: relative;
@@ -255,10 +252,7 @@ Remove filter for work img*/
         font-size: 3vw;
     }
     figure{
-        display: none;
-    }
-    main>h2{
-        display: none;
+        height: 40%;
     }
     main>section{
         flex-direction: column;
